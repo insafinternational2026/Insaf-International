@@ -315,7 +315,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -324,13 +324,16 @@ const Services = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 transition-all hover:shadow-xl"
+              className="bg-white p-4 md:p-8 rounded-2xl md:rounded-3xl shadow-sm border border-slate-100 transition-all hover:shadow-xl flex flex-col items-center text-center"
             >
-              <div className={`w-16 h-16 ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
-                {service.icon}
+              <div className={`w-12 h-12 md:w-16 md:h-16 ${service.color} rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-6 shrink-0`}>
+                {/* Scale icons for mobile */}
+                <div className="scale-75 md:scale-100">
+                  {service.icon}
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-primary mb-4">{service.title}</h3>
-              <p className="text-slate-600 leading-relaxed">
+              <h3 className="text-sm md:text-xl font-bold text-primary mb-2 md:mb-4 line-clamp-1">{service.title}</h3>
+              <p className="text-[10px] md:text-base text-slate-600 leading-tight md:leading-relaxed line-clamp-2">
                 {service.description}
               </p>
             </motion.div>
@@ -431,9 +434,9 @@ const Contact = () => {
                 <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shrink-0">
                   <Mail className="w-6 h-6 text-accent" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <div className="text-sm text-slate-400 uppercase tracking-widest mb-1">ইমেইল করুন</div>
-                  <a href="mailto:insaf.international2026@gmail.com" className="text-xl font-medium hover:text-accent transition-colors">
+                  <a href="mailto:insaf.international2026@gmail.com" className="text-lg md:text-xl font-medium hover:text-accent transition-colors break-all">
                     insaf.international2026@gmail.com
                   </a>
                 </div>
@@ -443,9 +446,9 @@ const Contact = () => {
                 <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shrink-0">
                   <MapPin className="w-6 h-6 text-accent" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <div className="text-sm text-slate-400 uppercase tracking-widest mb-1">সরাসরি আসুন</div>
-                  <div className="text-xl font-medium">Garden Complex, Sadar South Upazila, Cumilla-3500</div>
+                  <div className="text-lg md:text-xl font-medium break-words">Garden Complex, Sadar South Upazila, Cumilla-3500</div>
                   <a 
                     href="https://www.google.com/maps/@23.4101234,91.1974341,2012m/data=!3m1!1e3?authuser=0&entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" 
                     target="_blank" 
@@ -460,7 +463,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-2xl">
+          <div className="bg-white rounded-3xl p-6 md:p-8 lg:p-12 shadow-2xl">
             <h3 className="text-2xl font-bold text-primary mb-8">মেসেজ পাঠান</h3>
             <form className="space-y-6" onSubmit={handleWhatsAppRedirect}>
               <div className="grid md:grid-cols-2 gap-6">

@@ -302,6 +302,30 @@ const Services = () => {
       description: "সকল ধরনের সরকারি ও বেসরকারি অনলাইন আবেদন করা হয়।",
       icon: <Globe className="w-8 h-8" />,
       color: "bg-cyan-50 text-cyan-600"
+    },
+    {
+      title: "ডিজিটাল ডিজাইন এবং ফটো এডিটিং",
+      description: "প্রফেশনাল গ্রাফিক ডিজাইন এবং উন্নত মানের ফটো এডিটিং সেবা।",
+      icon: <Layers className="w-8 h-8" />,
+      color: "bg-cyan-50 text-cyan-600"
+    },
+    {
+      title: "প্রশাসনিক আবেদনপত্র ও ডকুমেন্ট ড্রাফটিং",
+      description: "AC Land ও UNO অফিস সংক্রান্ত সকল প্রকার প্রশাসনিক আবেদনপত্র তৈরি।",
+      icon: <FileText className="w-8 h-8" />,
+      color: "bg-slate-50 text-slate-900"
+    },
+    {
+      title: "অনলাইন সার্ভিস ও ডাটা এন্ট্রি",
+      description: "নির্ভুল ডাটা এন্ট্রি এবং সকল প্রকার অনলাইন সার্ভিস প্রদান।",
+      icon: <Globe className="w-8 h-8" />,
+      color: "bg-indigo-50 text-indigo-600"
+    },
+    {
+      title: "প্রফেশনাল রাইটিং সার্ভিস",
+      description: "ডকুমেন্ট রাইটিং, টাইপিং এবং প্রফেশনাল ড্রাফটিং সেবা।",
+      icon: <Edit3 className="w-8 h-8" />,
+      color: "bg-purple-50 text-purple-600"
     }
   ];
 
@@ -322,7 +346,11 @@ const Services = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ 
+                duration: 0.3,
+                delay: index * 0.05,
+                ease: "easeOut"
+              }}
               whileHover={{ y: -10, scale: 1.02 }}
               className="bg-white p-4 md:p-8 rounded-2xl md:rounded-3xl shadow-sm border border-slate-100 transition-all hover:shadow-xl flex flex-col items-center text-center"
             >

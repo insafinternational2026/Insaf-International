@@ -34,7 +34,8 @@ import {
   MoveRight,
   Baby,
   Edit3,
-  FileBadge
+  FileBadge,
+  Facebook
 } from "lucide-react";
 import { useState, FormEvent } from "react";
 
@@ -95,9 +96,19 @@ const Navbar = () => {
           <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
             <Shield className="text-white w-6 h-6" />
           </div>
-          <span className="text-xl font-display font-bold text-primary tracking-tight">
-            INSAF <span className="text-accent">INTERNATIONAL</span>
-          </span>
+          <div className="flex flex-col">
+            <span className="text-xl font-display font-bold text-primary tracking-tight leading-none">
+              INSAF <span className="text-accent">INTERNATIONAL</span>
+            </span>
+            <a 
+              href="https://www.facebook.com/profile.php?id=61578009368694" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-[12px] font-semibold text-slate-500 mt-1 hover:text-accent transition-colors flex items-center gap-1.5"
+            >
+              Developed by Zitu <Facebook className="w-4 h-4 fill-current" />
+            </a>
+          </div>
         </div>
 
         {/* Desktop Links */}
